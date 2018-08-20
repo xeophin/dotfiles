@@ -1,6 +1,6 @@
 # add proper encoding
-export LC_ALL=en_GB.UTF-8 
-export LANG=en_GB.UTF-8
+export LC_ALL=de_CH.UTF-8 
+export LANG=de_CH.UTF-8
 
 # Add powerline stuff
 powerline-daemon -q
