@@ -31,3 +31,4 @@ powerline-setup
 
 # Add alias file
 source  "$HOME/.config/fish/alias.fish"
+thefuck --alias | source
