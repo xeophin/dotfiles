@@ -23,6 +23,7 @@
 "    -> Spell checking
 "    -> Misc
 "    -> Helper functions
+"    -> Powerline
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -75,11 +76,11 @@ else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
-"Always show current position
-set ruler
+" Always show current position
+" set ruler
 
 " Height of the command bar
-set cmdheight=2
+" set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -263,7 +264,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -380,3 +381,13 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Powerline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set up powerline
+set laststatus=2
+python import sys; sys.path.append("/Users/km/.local/lib/python3.6/site-packages")
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup

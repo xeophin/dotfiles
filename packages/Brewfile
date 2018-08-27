@@ -1,0 +1,79 @@
+tap "buo/cask-upgrade"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/php"
+tap "homebrew/science"
+cask "osxfuse"
+brew "coreutils"
+brew "findutils", args: ["with-default-names"]
+brew "fish"
+brew "geckodriver"
+brew "git"
+brew "git-flow"
+brew "git-lfs"
+brew "gitfs"
+brew "graphviz"
+brew "node"
+brew "heroku"
+brew "mas"
+brew "mongodb"
+brew "node@6"
+brew "sqlite"
+brew "python", link: false
+brew "pipenv"
+brew "postgresql"
+brew "pyenv"
+brew "python@2"
+brew "r"
+brew "ruby"
+brew "thefuck"
+brew "tidy-html5"
+brew "yarn"
+brew "zlib"
+cask "adobe-creative-cloud"
+cask "atom"
+cask "blender"
+cask "calibre"
+cask "chromedriver"
+cask "dash"
+cask "font-fira-code"
+cask "font-firacode-nerd-font"
+cask "franz"
+cask "glimmerblocker"
+cask "google-chrome"
+cask "jetbrains-toolbox"
+cask "keybase"
+cask "odrive"
+cask "papers"
+cask "rstudio"
+cask "selfcontrol"
+cask "sequel-pro"
+cask "skype"
+cask "slack"
+cask "sourcetree"
+cask "steam"
+cask "sugarsync"
+cask "textmate"
+cask "timecamp"
+cask "tower"
+cask "transmit"
+cask "virtualbox"
+mas "1Blocker", id: 1107421413
+mas "Affinity Designer", id: 824171161
+mas "Affinity Photo", id: 824183456
+mas "Deliveries", id: 924726344
+mas "GarageBand", id: 682658836
+mas "GIPHY CAPTURE", id: 668208984
+mas "iA Writer", id: 775737590
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Reeder", id: 880001334
+mas "Spark", id: 1176895641
+mas "UlyssesMac", id: 1225570693
+mas "Wire", id: 931134707
