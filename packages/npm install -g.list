@@ -1,8 +1,7 @@
-artillery
-cordova
-eslint
-gulp
-ionic
-tslint
-typescript
-vue-cli
+@storybook/cli
+flow-typed
+lerna
+n
+node-gyp
+nodemon
+react-static
