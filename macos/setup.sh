@@ -182,8 +182,8 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en_GB" "en" "de_CH"
-defaults write NSGlobalDomain AppleLocale -string "de_CH@currency=CHF"
+defaults write NSGlobalDomain AppleLanguages -array "en-GB" "en-CH" "de-CH"
+defaults write NSGlobalDomain AppleLocale -string "en_CH@currency=CHF"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
