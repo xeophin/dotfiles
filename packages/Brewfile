@@ -8,6 +8,7 @@ tap "homebrew/php"
 tap "homebrew/science"
 cask "osxfuse"
 brew "coreutils"
+brew "duti"
 brew "findutils", args: ["with-default-names"]
 brew "fish"
 brew "geckodriver"
@@ -42,6 +43,10 @@ cask "franz"
 cask "glimmerblocker"
 cask "google-chrome"
 cask "jetbrains-toolbox"
+cask "gitup"
+cask "gpg-suite"
+cask "imagealpha"
+cask "imageoptim"
 cask "keybase"
 cask "odrive"
 cask "papers"
@@ -54,23 +59,24 @@ cask "sourcetree"
 cask "steam"
 cask "sugarsync"
 cask "textmate"
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlprettypatch"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "rescuetime"
+cask "station"
+cask "suspicious-package"
 cask "timecamp"
 cask "tower"
 cask "transmit"
 cask "virtualbox"
 mas "1Blocker", id: 1107421413
-mas "Affinity Designer", id: 824171161
-mas "Affinity Photo", id: 824183456
 mas "Deliveries", id: 924726344
-mas "GarageBand", id: 682658836
-mas "GIPHY CAPTURE", id: 668208984
-mas "iA Writer", id: 775737590
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Reeder", id: 880001334
 mas "Spark", id: 1176895641
-mas "UlyssesMac", id: 1225570693
-mas "Wire", id: 931134707
+cask "webpquicklook"
