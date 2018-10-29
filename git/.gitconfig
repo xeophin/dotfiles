@@ -1,7 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = /usr/bin/vim
-	
+
 	# Make `git rebase` safer on macOS
   # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
   trustctime = false
@@ -9,40 +9,40 @@
   # Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
-	
+
 [push]
 	default = simple
-	
+
 	# Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
-	
+
 [alias]
 	unstage = reset HEAD --
 	uncommit = reset --soft HEAD~
-	
+
 	# Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-  
+
   # Amend the currently staged files to the latest commit
   amend = commit --amend --reuse-message=HEAD
-  
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	
+
 [user]
 	name = Kaspar Manz
-	email = kaspar@xeophin.net
-	
+	email = kaspar.manz@tamedia.ch
+
 # Selected .gitconfig goodness based on https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig
 
 [help]
 
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
-	
+
 [merge]
 
 	# Include summaries of merged commits in newly created merge commit messages
