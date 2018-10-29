@@ -26,6 +26,7 @@ brew "r"
 brew "ruby"
 brew "thefuck"
 brew "tidy-html5"
+brew "vim", args: ["with-lua", "with-override-system-vi"]
 brew "yarn"
 brew "zlib"
 cask "adobe-creative-cloud"
@@ -75,3 +76,4 @@ mas "Pages", id: 409201541
 mas "Reeder", id: 880001334
 mas "Spark", id: 1176895641
 cask "webpquicklook"
+mas "Xcode", id: 497799835
