@@ -16,6 +16,7 @@ brew "gitfs"
 brew "graphviz"
 brew "node"
 brew "mas"
+brew "mongodb"
 brew "sqlite"
 brew "python", link: false
 brew "pipenv"

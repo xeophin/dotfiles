@@ -1,4 +1,6 @@
 @storybook/cli
+bower
+express
 flow-typed
 lerna
 n
