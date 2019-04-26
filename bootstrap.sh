@@ -24,7 +24,7 @@ else
 fi
 
 info "Installing homebrew …"
-if which brew; then
+if brew -v foo >/dev/null 2>&1; then
     success "Homebrew already installed."
 elif /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; then
     success "Installed Homebrew"
