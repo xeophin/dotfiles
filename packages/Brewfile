@@ -4,6 +4,8 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "homebrew/php"
+tap "homebrew/science"
 cask "osxfuse"
 brew "coreutils"
 brew "duti"
@@ -16,7 +18,7 @@ brew "git-lfs"
 brew "python", link: false
 brew "gitfs"
 brew "graphviz"
-brew "node"
+brew "lftp"
 brew "mas"
 brew "n"
 brew "node", link: false
@@ -28,10 +30,12 @@ brew "pyenv"
 brew "python@2"
 brew "r"
 brew "ruby", link: true
+brew "s3cmd"
 brew "thefuck"
 brew "vim", args: ["with-lua", "with-override-system-vi"]
 brew "yarn"
 brew "zlib"
+brew "heroku/brew/heroku"
 cask "adobe-creative-cloud"
 cask "atom"
 cask "blender"
@@ -43,17 +47,21 @@ cask "font-fira-code"
 cask "font-firacode-nerd-font"
 cask "font-source-sans-pro"
 cask "fork"
+cask "font-ibm-plex"
 cask "franz"
 cask "gitup"
 cask "glimmerblocker"
 cask "google-chrome"
-cask "jetbrains-toolbox"
-cask "gitup"
 cask "gpg-suite"
+cask "hyper"
+cask "jeromelebel-mongohub"
+cask "jetbrains-toolbox"
 cask "imagealpha"
 cask "imageoptim"
 cask "keybase"
 cask "nightowl"
+cask "notion"
+cask "openrefine"
 cask "papers"
 cask "paw"
 cask "qlcolorcode"
@@ -68,15 +76,30 @@ cask "selfcontrol"
 cask "sequel-pro"
 cask "station"
 cask "suspicious-package"
+cask "skype"
+cask "slack"
+cask "sourcetree"
+cask "steam"
 cask "timecamp"
 cask "transmit"
 cask "virtualbox"
-mas "1Blocker", id: 1107421413
-mas "Deliveries", id: 924726344
-mas "Magnet", id: 441258766
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Reeder", id: 880001334
-mas "Spark", id: 1176895641
 cask "webpquicklook"
-mas "Xcode", id: 497799835
+mas "", id: 409203825
+mas "", id: 497799835
+mas "", id: 824171161
+mas "", id: 1335413823
+mas "", id: 1435296403
+mas "", id: 409183694
+mas "", id: 408981434
+mas "", id: 1225570693
+mas "", id: 668208984
+mas "", id: 775737590
+mas "", id: 441258766
+mas "", id: 924726344
+mas "", id: 1107421413
+mas "", id: 931134707
+mas "", id: 409201541
+mas "", id: 880001334
+mas "", id: 682658836
+mas "", id: 1176895641
+mas "", id: 824183456
