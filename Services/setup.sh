@@ -6,13 +6,13 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath /Library/Keyboard\ Layouts/)"
+DESTINATION="$(realpath ~/Library/Services/)"
 
-info "Configuring keyboard layouts..."
+info "Configuring services..."
 mkdir -p "${DESTINATION}"
 find * -maxdepth 0 -not -name "setup.sh" | while read fn; do
     fn=$(basename "${fn}")
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
-success "Finished configuring keyboard layouts."
+success "Finished configuring services."
