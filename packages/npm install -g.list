@@ -1,9 +1,4 @@
-@storybook/cli
-bower
-express
 flow-typed
 lerna
-n
 node-gyp
 nodemon
-react-static
