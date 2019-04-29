@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
+<?xml version="1.1" encoding="UTF-8"?>
+<!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--xeoDvorak II, by Kaspar Manz. http://xeophin.net // Based on: German Dvorak Type II, Vers. 1.0 by Matthias Halibrand. Visit http://www.halibrand.de/dvorak for latest updates-->
 <!--Created by Ukelele version 1.8b2 on 2007-06-13 at 20:53 (CEST)-->
-<!--Last edited by Ukelele version 2.2.4 on 2013-10-31 at 17:17 (CET)-->
+<!--Last edited by Ukelele version 3.3.0.249 on 2019-03-22 at 14:11 (CET)-->
 <keyboard group="126" id="-9184" name="xeoDvorak II" maxout="3">
     <layouts>
-        <layout first="0" last="0" modifiers="commonModifiers" mapSet="ANSI"/>
+        <layout first="0" last="0" mapSet="ANSI" modifiers="commonModifiers"/>
     </layouts>
     <modifierMap id="commonModifiers" defaultIndex="0">
         <keyMapSelect mapIndex="0">
@@ -92,6 +92,9 @@
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
             <!-- gap, 54 through 64 -->
+            <key code="56" output=""/>
+            <key code="58" output=""/>
+            <key code="59" output=""/>
             <key code="64" output="&#x0010;"/>
             <key code="65" output="."/>
             <key code="66" output="&#x001D;"/>
@@ -315,7 +318,7 @@
             <key code="39" output="L"/>
             <key code="40" output="R"/>
             <key code="41" output="S"/>
-            <key code="42" output="-"/>
+            <key code="42" output="_"/>
             <key code="43" output="W"/>
             <key code="44" output="&#x0027;"/>
             <key code="45" output="B"/>
@@ -328,6 +331,7 @@
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
             <!-- gap, 54 through 64 -->
+            <key code="56" output=""/>
             <key code="64" output="&#x0010;"/>
             <key code="65" output=","/>
             <key code="66" output="&#x001D;"/>
@@ -754,12 +758,6 @@
             <when state="diaeresis" output="¨"/>
             <when state="tilde" output="~"/>
         </action>
-        <action id="&#x003C;">
-            <when state="none" output="&#x003C;"/>
-        </action>
-        <action id="&#x003E;">
-            <when state="none" output="&#x003E;"/>
-        </action>
         <action id="-">
             <when state="none" output="-"/>
             <when state="accent circumflex" output="^_^"/>
@@ -803,8 +801,14 @@
             <when state="none" output="9"/>
             <when state="fraction 1/n" output="¹⁄₉"/>
         </action>
+        <action id="&#x003C;">
+            <when state="none" output="&#x003C;"/>
+        </action>
         <action id="=">
             <when state="none" output="="/>
+        </action>
+        <action id="&#x003E;">
+            <when state="none" output="&#x003E;"/>
         </action>
         <action id="A">
             <when state="none" output="A"/>

@@ -2,7 +2,7 @@
 
 symlink() {
     OVERWRITTEN=""
-    if [ -e "$2" ] || [ -h "$2" ]; then
+    if [[ -e "$2" ]] || [[ -h "$2" ]]; then
         OVERWRITTEN="(Overwritten)"
         if ! rm -r "$2"; then
             substep_error "Failed to remove existing file(s) at $2."
