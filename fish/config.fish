@@ -31,7 +31,7 @@ set -x PYENV_ROOT "$HOME/.pyenv"
 status --is-interactive; and source (pyenv init -|psub)
 
 # Set up powerline
-set fish_function_path $fish_function_path "$HOME/.local/lib/python3.6/site-packages/powerline/bindings/fish"
+set fish_function_path $fish_function_path (brew --prefix)/lib/python3.7/site-packages/powerline/bindings/fish
 powerline-setup
 
 # Add alias file
