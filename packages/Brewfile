@@ -29,7 +29,7 @@ brew "r"
 brew "ruby", link: true
 brew "s3cmd"
 brew "thefuck"
-brew "vim",
+brew "vim"
 brew "yarn"
 brew "zlib"
 brew "heroku/brew/heroku"
