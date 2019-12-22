@@ -4,8 +4,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap "homebrew/php"
-tap "homebrew/science"
 cask "osxfuse"
 brew "coreutils"
 brew "duti"
@@ -15,24 +13,23 @@ brew "libpng"
 brew "geckodriver"
 brew "git"
 brew "git-lfs"
-brew "python", link: false
 brew "gitfs"
 brew "graphviz"
 brew "lftp"
 brew "mas"
 brew "n"
-brew "node", link: false
+brew "node"
 brew "sqlite"
-brew "python", link: false
+brew "python"
 brew "pipenv"
 brew "postgresql"
 brew "pyenv"
-brew "python@2"
+brew "python@2", link: false
 brew "r"
 brew "ruby", link: true
 brew "s3cmd"
 brew "thefuck"
-brew "vim", args: ["with-lua", "with-override-system-vi"]
+brew "vim",
 brew "yarn"
 brew "zlib"
 brew "heroku/brew/heroku"

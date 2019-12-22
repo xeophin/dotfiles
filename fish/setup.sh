@@ -35,7 +35,7 @@ set_fish_shell() {
             fi
         fi
         substep_info "Changing shell to fish"
-        if sudo chsh -s /usr/local/bin/fish; then
+        if chsh -s $(which fish); then
             substep_success "Changed shell to fish"
         else
             substep_error "Failed changing shell to fish"
@@ -51,4 +51,3 @@ if set_fish_shell; then
 else
     error "Failed setting up fish shell."
 fi
-
