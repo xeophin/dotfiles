@@ -1,102 +1,141 @@
 tap "buo/cask-upgrade"
+tap "dart-lang/dart"
+tap "getantibody/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "mas-cli/tap", pin: true
+tap "sass/sass"
 cask "osxfuse"
-brew "coreutils"
-brew "duti"
-brew "findutils", args: ["with-default-names"]
-brew "fish"
+# Library for manipulating PNG images
 brew "libpng"
-brew "geckodriver"
-brew "git"
-brew "git-lfs"
-brew "gitfs"
-brew "graphviz"
-brew "lftp"
-brew "mas"
-brew "n"
-brew "node"
+# XML-based font configuration API for X Windows
+brew "fontconfig"
+# Command-line interface for SQLite
 brew "sqlite"
-brew "python"
+# Interpreted, interactive, object-oriented programming language
+brew "python", link: false
+# Vector graphics library with cross-device output support
+brew "cairo"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Select default apps for documents and URL schemes on macOS
+brew "duti"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# WebDriver <-> Marionette proxy
+brew "geckodriver"
+# Distributed revision control system
+brew "git"
+# Extensions to follow Vincent Driessen's branching model
+brew "git-flow"
+# Git extension for versioning large files
+brew "git-lfs"
+# Version controlled file system
+brew "gitfs"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Sophisticated file transfer program
+brew "lftp"
+# Mac App Store command-line interface
+brew "mas"
+# Scalable distributed version control system
+brew "mercurial"
+# Node version management
+brew "n", link: false
+# Platform built on V8 to build network applications
+brew "node", link: false
+# Python dependency management tool
 brew "pipenv"
+# Object-relational database system
 brew "postgresql"
+# Python version management
 brew "pyenv"
-brew "python@2", link: false
+# Interpreted, interactive, object-oriented programming language
+brew "python@2"
+# Software environment for statistical computing
 brew "r"
+# Powerful, clean, object-oriented scripting language
 brew "ruby", link: true
+# Command-line tool for the Amazon S3 service
 brew "s3cmd"
+# Programatically correct mistyped console commands
 brew "thefuck"
+# Granddaddy of HTML tools, with support for modern standards
+brew "tidy-html5"
+# Vi 'workalike' with many additional features
 brew "vim"
+# JavaScript package manager
 brew "yarn"
+# General-purpose lossless data-compression library
 brew "zlib"
+# UNIX shell (command interpreter)
+brew "zsh"
+# The fastest shell plugin manager
+brew "getantibody/tap/antibody"
+# Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
+# Stylesheet Preprocessor
+brew "sass/sass/sass"
 cask "adobe-creative-cloud"
 cask "atom"
 cask "blender"
 cask "calibre"
+cask "caret"
 cask "chromedriver"
 cask "dash"
-cask "firefox"
 cask "font-fira-code"
 cask "font-firacode-nerd-font"
-cask "font-source-sans-pro"
-cask "fork"
 cask "font-ibm-plex"
+cask "font-source-sans-pro"
 cask "franz"
-cask "gitup"
 cask "glimmerblocker"
 cask "google-chrome"
 cask "gpg-suite"
 cask "hyper"
 cask "jeromelebel-mongohub"
 cask "jetbrains-toolbox"
-cask "imagealpha"
-cask "imageoptim"
 cask "keybase"
-cask "nightowl"
 cask "notion"
+cask "odrive"
 cask "openrefine"
 cask "papers"
-cask "paw"
 cask "qlcolorcode"
 cask "qlmarkdown"
 cask "qlprettypatch"
-cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
 cask "rescuetime"
 cask "rstudio"
 cask "selfcontrol"
 cask "sequel-pro"
-cask "station"
-cask "suspicious-package"
 cask "skype"
 cask "slack"
 cask "sourcetree"
-cask "steam"
+cask "suspicious-package"
+cask "swish"
+cask "textmate"
 cask "timecamp"
+cask "tower"
 cask "transmit"
 cask "virtualbox"
-cask "webpquicklook"
-mas "", id: 409203825
-mas "", id: 497799835
-mas "", id: 824171161
-mas "", id: 1335413823
-mas "", id: 1435296403
-mas "", id: 409183694
-mas "", id: 408981434
-mas "", id: 1225570693
-mas "", id: 668208984
-mas "", id: 775737590
-mas "", id: 441258766
-mas "", id: 924726344
-mas "", id: 1107421413
-mas "", id: 931134707
-mas "", id: 409201541
-mas "", id: 880001334
-mas "", id: 682658836
-mas "", id: 1176895641
-mas "", id: 824183456
+mas "1Blocker", id: 1107421413
+mas "Affinity Designer", id: 824171161
+mas "Affinity Photo", id: 824183456
+mas "Deliveries", id: 924726344
+mas "GarageBand", id: 682658836
+mas "iA Writer", id: 775737590
+mas "iMovie", id: 408981434
+mas "Instapaper", id: 1481302432
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Reeder", id: 880001334
+mas "Spark", id: 1176895641
+mas "Wire", id: 931134707
+mas "Xcode", id: 497799835
