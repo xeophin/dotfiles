@@ -91,3 +91,6 @@ antibody bundle < ~/.zsh_plugins.txt
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.zsh_p10k.zsh ]] || source ~/.zsh_p10k.zsh
+
+# Set up the fuck
+eval $(thefuck --alias)
