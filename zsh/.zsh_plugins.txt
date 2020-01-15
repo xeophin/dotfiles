@@ -1,0 +1,5 @@
+romkatv/powerlevel10k
+chrissicool/zsh-256color
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting
