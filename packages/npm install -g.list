@@ -2,3 +2,4 @@ flow-typed
 lerna
 node-gyp
 nodemon
+pnpm

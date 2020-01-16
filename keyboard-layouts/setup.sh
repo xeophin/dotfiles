@@ -6,11 +6,11 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath /Library/Keyboard\ Layouts/)"
+DESTINATION="$(realpath "/Library/Keyboard Layouts/")"
 
 info "Configuring keyboard layouts..."
 mkdir -p "${DESTINATION}"
-find * -maxdepth 0 -not -name "$(basename ${0})" | while read fn; do
+find * -maxdepth 0 -name "*.bundle" | while read fn; do
     fn=$(basename "${fn}")
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done

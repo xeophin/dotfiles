@@ -38,3 +38,6 @@ powerline-setup
 source  "$HOME/.config/fish/alias.fish"
 thefuck --alias | source
 set -g fish_user_paths "/usr/local/opt/mongodb@3.6/bin" $fish_user_paths
+
+# Add itch.io butler
+set -g fish_user_paths "$HOME/Library/Application Support/itch/apps/butler" $fish_user_paths
