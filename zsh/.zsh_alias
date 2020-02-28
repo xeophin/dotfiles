@@ -1,0 +1,9 @@
+# opening current directory in finder
+alias f="open ."
+
+# navigating directories more quickly
+alias ..="cd .."
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../" #this is probably ridiculous
+
