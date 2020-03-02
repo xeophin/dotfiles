@@ -1,6 +1,7 @@
 .html
 .htm
 .js
+.jsx
 .json
 .css
 .scss
@@ -10,3 +11,6 @@
 .yaml
 .yml
 .xml
+.php
+.ts
+.tsx

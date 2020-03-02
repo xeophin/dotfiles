@@ -95,7 +95,10 @@ antibody bundle < ~/.zsh_plugins.txt
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.zsh_alias
 
+# Add additional function
+source ~/dotfiles/zsh/functions/repo.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.zsh_p10k.zsh ]] || source ~/.zsh_p10k.zsh
 
