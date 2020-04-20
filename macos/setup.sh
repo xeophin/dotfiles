@@ -326,7 +326,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 #defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Show the ~/Library folder
-chflags nohidden ~/Library
+chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
 # Show the /Volumes folder
 #sudo chflags nohidden /Volumes
@@ -473,7 +473,7 @@ defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 #defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 # Enable Safari’s debug menu
-#defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 # Make Safari’s search banners default to Contains instead of Starts With
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
@@ -510,6 +510,7 @@ defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 # Disable Java
 defaults write com.apple.Safari WebKitJavaEnabled -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabledForLocalFiles -bool false
 
 # Block pop-up windows
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
@@ -742,8 +743,8 @@ defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool 
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
 
 # Use the system-native print preview dialog
-defaults write com.google.Chrome DisablePrintPreview -bool false
-defaults write com.google.Chrome.canary DisablePrintPreview -bool false
+defaults write com.google.Chrome DisablePrintPreview -bool true
+defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 
 # Expand the print dialog by default
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
