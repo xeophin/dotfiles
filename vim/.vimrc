@@ -387,7 +387,6 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " set up powerline
 set laststatus=2
-python3 import sys; sys.path.append("/usr/local/lib/python3.7/site-packages/")
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
