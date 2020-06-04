@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 
 DIR=$(dirname "$0")
-cd "$DIR"
+cd "$DIR" || exit
 
 . ../scripts/functions.sh
 
