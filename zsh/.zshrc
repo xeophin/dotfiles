@@ -82,6 +82,9 @@ export LC_TIME=de_CH.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Set up the NVM plugin to use .nvmrc files
+export NVM_AUTO_USE=true
+
 # Set up Antibody
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt

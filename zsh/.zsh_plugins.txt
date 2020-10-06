@@ -4,3 +4,9 @@ agkozak/zsh-z
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
+
+# Support for nvm and npm
+lukechilds/zsh-nvm
+lukechilds/zsh-better-npm-completion
+buonomo/yarn-completion
+g-plane/zsh-yarn-autocompletions
