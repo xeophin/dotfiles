@@ -5,10 +5,11 @@ tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "mas-cli/tap", pin: true
+tap "mas-cli/tap"
+tap "mongodb/brew"
 tap "sass/sass"
-cask "osxfuse"
 # Library for manipulating PNG images
 brew "libpng"
 # XML-based font configuration API for X Windows
@@ -16,7 +17,7 @@ brew "fontconfig"
 # Command-line interface for SQLite
 brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
-brew "python", link: false
+brew "python@3.8"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # GNU File, Shell, and Text utilities
@@ -27,18 +28,42 @@ brew "duti"
 brew "findutils"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# GNOME XML library
+brew "libxml2"
+# Postgres C API library
+brew "libpq"
+# Adds spatial SQL capabilities to SQLite
+brew "libspatialite"
+# Optimized BLAS library
+brew "openblas"
+# Package for scientific computing with Python
+brew "numpy"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Geospatial Data Abstraction Library
+brew "gdal"
 # WebDriver <-> Marionette proxy
 brew "geckodriver"
 # Distributed revision control system
 brew "git"
 # Extensions to follow Vincent Driessen's branching model
 brew "git-flow"
+# Git-powered FTP client
+brew "git-ftp"
 # Git extension for versioning large files
 brew "git-lfs"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Version controlled file system
 brew "gitfs"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# CLI for ImageOptim, ImageAlpha and JPEGmini
+brew "imageoptim-cli"
 # Sophisticated file transfer program
 brew "lftp"
 # Mac App Store command-line interface
@@ -49,24 +74,30 @@ brew "mercurial"
 brew "n", link: false
 # Platform built on V8 to build network applications
 brew "node", link: false
+# Platform built on V8 to build network applications
+brew "node@6"
 # Python dependency management tool
 brew "pipenv"
 # Object-relational database system
 brew "postgresql"
 # Python version management
 brew "pyenv"
+# Interpreted, interactive, object-oriented programming language
+brew "python@2", link: false
 # Software environment for statistical computing
 brew "r"
 # Powerful, clean, object-oriented scripting language
 brew "ruby", link: true
 # Command-line tool for the Amazon S3 service
 brew "s3cmd"
-# Programatically correct mistyped console commands
+# Programmatically correct mistyped console commands
 brew "thefuck"
 # Granddaddy of HTML tools, with support for modern standards
 brew "tidy-html5"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Utilities to create and convert Web Open Font File (WOFF) files
+brew "woff2"
 # JavaScript package manager
 brew "yarn"
 # General-purpose lossless data-compression library
@@ -77,58 +108,106 @@ brew "zsh"
 brew "getantibody/tap/antibody"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community@3.6", link: true
 # Stylesheet Preprocessor
 brew "sass/sass/sass"
+# Collection of apps and services for photography, design, video, web, and UX
 cask "adobe-creative-cloud"
+# Text editor
 cask "atom"
+# Free and open-source 3D creation suite
 cask "blender"
+# E-books management software
 cask "calibre"
 cask "caret"
+# Automated testing of webapps for Google Chrome
 cask "chromedriver"
+# API documentation browser and code snippet manager
 cask "dash"
+# Voice and text chat software
+cask "discord"
 cask "font-fira-code"
 cask "font-firacode-nerd-font"
 cask "font-ibm-plex"
+# Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
+cask "font-iosevka"
+# Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
+cask "font-iosevka-aile"
+# Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
+cask "font-iosevka-etoile"
+cask "font-iosevka-nerd-font"
+# Typeface made for developers
+cask "font-jetbrains-mono"
+cask "font-jetbrainsmono-nerd-font"
+# Fonts designed for user interfaces
 cask "font-source-sans-pro"
+# Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more
 cask "franz"
+# Web browser
 cask "google-chrome"
-cask "hyper"
+# Tools to protect your emails and files
+cask "gpg-suite"
 cask "jeromelebel-mongohub"
+# JetBrains tools manager
 cask "jetbrains-toolbox"
+# End-to-end encryption software
 cask "keybase"
+# App to manage software development and track bugs
+cask "linear-linear"
+# App to write, plan, collaborate, and get organized
 cask "notion"
+# Tool to make any cloud storage unified, synchronized, shareable, and encrypted
+cask "odrive"
 cask "openrefine"
-cask "papers"
+# File system integration
+cask "osxfuse"
+# Geographic Information System
+cask "qgis"
+# QuickLook plug-in that renders source code with syntax highlighting
+cask "qlcolorcode"
 cask "qlprettypatch"
 cask "quicklook-csv"
 cask "quicklook-json"
+# Time optimising application
 cask "rescuetime"
+# Data science software focusing on R and Python
 cask "rstudio"
 cask "selfcontrol"
+# MySQL/MariaDB database management platform
 cask "sequel-pro"
+# Video chat, voice call and instant messaging application
 cask "skype"
+# Team communication and collaboration software
 cask "slack"
-cask "sourcetree"
+# Application for inspecting installer packages
 cask "suspicious-package"
+# Control windows and applications right from your trackpad
 cask "swish"
-cask "textmate"
+# Client application for TimeCamp software - track time and change tasks
 cask "timecamp"
-cask "tower"
+# File transfer application
 cask "transmit"
+# Tool for telling interactive, nonlinear stories
+cask "twine"
+# Free and open-source hosted hypervisor for x86 virtualization
 cask "virtualbox"
+# Open-source code editor
+cask "visual-studio-code"
+# Open-source markdown editor
+cask "zettlr"
 mas "1Blocker", id: 1107421413
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
+mas "Are.na for Safari", id: 1497800947
+mas "bookmarker for pinboard", id: 1451400394
 mas "Deliveries", id: 924726344
-mas "GarageBand", id: 682658836
+mas "Developer", id: 640199958
+mas "Hush", id: 1544743900
 mas "iA Writer", id: 775737590
-mas "iMovie", id: 408981434
-mas "Instapaper", id: 1481302432
+mas "Instapaper Save", id: 1481302432
 mas "Keynote", id: 409183694
-mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Reeder", id: 880001334
-mas "Spark", id: 1176895641
-mas "Wire", id: 931134707
 mas "Xcode", id: 497799835
