@@ -5,6 +5,6 @@
 Update Brewfile using
 
 ```bash
-brew bundle dump --force
+brew bundle dump --force --describe
 ```
 
