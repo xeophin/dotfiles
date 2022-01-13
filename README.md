@@ -61,6 +61,12 @@ files
 * setup.sh - Sets the defaults set up in the different files
 * app.package.id - Contains all extensions for the specified program
 
+On the lookout for the bundle ID of an application?
+
+```sh
+osascript -e 'id of app "App Name"'
+```
+
 ### Fish (fish/)
 * setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
 * config.fish - Global fish configuration (.fishrc)
