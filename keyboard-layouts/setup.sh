@@ -6,7 +6,7 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath "/Library/Keyboard Layouts/")"
+DESTINATION="$(realpath "/Library/Keyboard Layouts")"
 
 info "Configuring keyboard layouts..."
 mkdir -p "${DESTINATION}"
