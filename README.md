@@ -1,9 +1,13 @@
 # Dotfiles
 
-For more information about dotfiles, I wrote these articles on my blog:
+These dotfiles are a fork of the dotfiles by [Rosco Kalis](https://github.com/rkalis/dotfiles).
+
+For more information about dotfiles, he wrote the following blogposts on his blog:
 * [Dotfiles: automating macOS system configuration](https://kalis.me/dotfiles-automating-macos-system-configuration/)
 * [Increasing development productivity with repository management](https://kalis.me/increasing-development-productivity-repository-management/)
 * [Set up a Hyper Key with Hammerspoon on macOS](https://kalis.me/setup-hyper-key-hammerspoon-macos/)
+
+These files have been adapted to my use case.
 
 ## Usage
 1. Restore your safely backed up ssh keys to `~/.ssh/`
@@ -17,16 +21,10 @@ For more information about dotfiles, I wrote these articles on my blog:
 3. Clone this repository
 
   ```
-  git clone git@github.com:rkalis/dotfiles.git
+  git clone git@github.com:xeophin/dotfiles.git
   ```
 4. Run the `bootstrap.sh` script
     1. Alternatively, only run the `setup.sh` scripts in specific subfolders if you don't need everything
-5. (Optional) Install missing applications from the internet
-  * [Popcorn Time](https://popcorntime.sh/)
-  * [Pyxel Edit](http://pyxeledit.com/)
-  * [UvAVPN](http://student.uva.nl/en/content/az/uvavpn/download/download-uvavpn-software.html)
-6. (Optional) Point the Alfred preference sync to the right folder
-7. (Optional) Point the Microsoft Remote Desktop folder to the right folder
 
 ## Customisation
 I strongly encourage you to play around with the configurations, and add or remove features.
@@ -52,10 +50,14 @@ This folder is a collection of my own repos, some of which are even private. The
 ### User Bin (bin/)
 * setup.sh - Symlinks the other contents of the folder to `~/bin/`
 * imgcat - A utility to display images inline in iTerm 2
-* sethidden - A shell script which takes command line arguments to show or hide
-hidden files
-* togglehidden - A shell script that toggles between showing and hiding hidden
-files
+* sethidden - A shell script which takes command line arguments to show or hide hidden files
+* togglehidden - A shell script that toggles between showing and hiding hidden files
+
+### Color Sync Profiles (colorSync/)
+Contains commonly used ColorSync profiles used in Europe (and the newspaper production).
+
+* setup.sh – Symlinks the color profiles to `~/Library/ColorSync/Profiles/`
+
 
 ### Duti (duti/)
 * setup.sh - Sets the defaults set up in the different files
@@ -67,52 +69,20 @@ On the lookout for the bundle ID of an application?
 osascript -e 'id of app "App Name"'
 ```
 
-### Fish (fish/)
-* setup.sh - Symlinks all fish files to their corresponding location in `~/.config/fish/`
-* config.fish - Global fish configuration (.fishrc)
-* completions/
-  * conda.fish - Contains completions to all `conda` commands
-  * repo.fish - Contains all repos as completions for the `repo` command
-  * repodir.fish - Contains all repos as completions for the `repodir` command
-* functions/
-  * abbrex.fish - Utility for expanding abbreviations in fish-scripts
-  * clear.fish - Clears the screen and shows fish_greeting
-  * emptytrash.fish - Empties trash and clears system logs
-  * fish_greeting.fish - My personal fish greeting using the
-  full-colour fish logo
-  * fish_prompt.fish - The Classic + Git prompt from the fish web config
-  * forrepos.fish - Executes a passed command for all repos in `~/repos`
-  * ls.fish - Calling ls with parameter --color=auto
-  * pubkey.fish - Copies the public key to the clipboard
-  * repo.fish - Finds a repository in `~/repos` and jumps to it
-  * repodir.fish - Finds a repository in `~/repos` and prints its path
-  * setup.fish - Initial setup for a new fish installation,
-  contains abbreviations
-  * update.fish - Installs OS X Software Updates, updates Ruby gems, Homebrew,
-  npm, and their installed packages
-  * week.fish - Returns the current week number
+### Editor Config (editorconfig/)
+
+* setup.sh – Symlinks the `.editorconfig` file to `~/`
+* .editorconfig – The root .editorconfig. Yes, I set it to use tabs. At least for now.
 
 ### Git (git/)
 * setup.sh - Symlinks all git files to `~/`
-* .gitignore_global - Contains global gitignores, such as OS-specific files and
-several compiled files
+* .gitignore_global - Contains global gitignores, such as OS-specific files and several compiled files
 * .gitconfig - Sets several global Git variables
 
-### Hammerspoon (hammerspoon/)
-* setup.sh - Symlinks all lua and AppleScript files to `~/.hammerspoon/`
-* init.lua - Contains the main Hammerspoon config, importing the others
-* caffeinate.lua - Shortcuts for managing screen state (locking, etc.)
-* hyper.lua - Binds the "F18" key to a Hyper mode, which can be used for
-global commands
-* minimising.lua - Shortcuts for minimising and unminimising windows
-* shortcuts.lua - Hyper key bindings to existing shortcuts
-* spectacle.lua - Window and monitor management using hyper mode
-* togglevpn.applescript - Toggles Viscosity vpn connection
-* togglevpn.lua - Binds a shortcut to the execution of `togglevpn.applescript`
+### Keyboard Layouts (keyboard-layouts/)
+Contains my prefered keyboard layouts ([Deutsch Dvorak Typ II für Mac OS X](http://halibrand.de/dvorak/), as well as my bastardisation of it)
 
-### Karabiner (karabiner/)
-* setup.sh - Symlinks Karabiner settings to `~/.config/karabiner`
-* karabiner.json - Binds the CAPS LOCK key to "F18" to use with hammerspoon
+* setup.sh – Symlinks the Keyboard Layouts to `/Library/Keyboard Layouts/`)
 
 ### macOS Preferences (macos/)
 * setup.sh - Executes a long list of commands pertaining to macOS Preferences
@@ -121,15 +91,22 @@ global commands
 * setup.sh - Installs the contents of the .list files and the Brewfile
 
 ### Python (python/)
-* setup.sh - Creates the conda envs for the environment.yml files
+* setup.sh - Currently empty, since I don't use Python that often
+
+### Raycast (raycast/)
+
+* script-commands – Script commands to be used with [Raycast](https://www.raycast.com/). Currently empty, requires Raycast to be configured to point here.
 
 ### Repositories (repos/)
-* setup.sh - Clones the repositories in the .list files at the corresponding
-locations
+* setup.sh - Clones the repositories in the .list files at the corresponding locations
 
 ### Helper Scripts (scripts/)
-* functions.sh - Contains helper functions for symlinking files and printing
-  progress messages
+* functions.sh - Contains helper functions for symlinking files and printing progress messages
+
+### Services (services/)
+Various scripts and workflows that by 
+
+* setup.sh – are being symlinked to `~/Library/Services/`
 
 ### Vim (vim/)
 * setup.sh - Symlinks all vim files to `~/`
@@ -138,3 +115,14 @@ locations
 ### Visual Studio Code (vscode/)
 * setup.sh - Symlinks the settings.json file to `~/Library/Application Support/Code/User`
 * settings.json - Contains user settings for Visual Studio Code
+
+### Zsh (zsh/)
+
+Configuration and Setup for [Zsh](https://www.zsh.org/).
+
+* setup.sh – Symlinks the `.z*` files to `~/`
+* .zprofile – `PATH` support for `pyenv`
+* .zsh_alias – Aliases to make working with Zsh faster
+* .zsh_p10k.zsh – Powerlevel10k config
+* .zsh_plugins.txt – Plugins that should be loaded using the plugin manager [Antibody](https://getantibody.github.io/)
+* .zshrc – Zsh Config

@@ -6,7 +6,7 @@ cd "$DIR" || exit
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath ~/Library/Services/)"
+DESTINATION="$(realpath ~/Library/Services)"
 
 info "Configuring services..."
 mkdir -p "${DESTINATION}"
