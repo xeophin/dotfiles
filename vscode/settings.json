@@ -1,0 +1,17 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "Iosevka, 'SF Mono', 'JetBrains Mono', 'IBM Plex Mono', 'Source Code Pro', Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.fontSize": 13,
+    "editor.cursorSurroundingLines": 3,
+    "workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
+    "window.autoDetectColorScheme": true,
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "telemetry.telemetryLevel": "crash",
+    "material-icon-theme.activeIconPack": "react",
+    "markdown.preview.typographer": true
+}
