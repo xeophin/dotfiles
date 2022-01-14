@@ -5,6 +5,9 @@ zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-syntax-highlighting
 
+ohmyzsh/ohmyzsh path:plugins/dotenv
+ohmyzsh/ohmyzsh path:plugins/pyenv
+
 # Support for nvm and npm
 lukechilds/zsh-nvm
 lukechilds/zsh-better-npm-completion
