@@ -116,3 +116,6 @@ eval $(thefuck --alias)
 
 # Set up PyEnv
 eval "$(pyenv init -)"
+
+# Set up Direnv
+eval "$(direnv hook zsh)"
