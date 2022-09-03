@@ -114,8 +114,5 @@ fpath=(~/dotfiles/zsh/completions/ $fpath)
 # Set up the fuck
 eval $(thefuck --alias)
 
-# Set up PyEnv
-eval "$(pyenv init -)"
-
 # Set up Direnv
 eval "$(direnv hook zsh)"
