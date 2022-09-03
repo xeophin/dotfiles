@@ -7,3 +7,5 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../" #this is probably ridiculous
 
+# Use Python 3
+alias python=/usr/local/bin/python3
