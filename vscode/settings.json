@@ -13,5 +13,10 @@
     "workbench.preferredLightColorTheme": "Solarized Light",
     "telemetry.telemetryLevel": "crash",
     "material-icon-theme.activeIconPack": "react",
-    "markdown.preview.typographer": true
+    "markdown.preview.typographer": true,
+    "window.commandCenter": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "jupyter.sendSelectionToInteractiveWindow": true
 }
