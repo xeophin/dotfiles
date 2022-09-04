@@ -18,5 +18,9 @@
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.variableTypes": true,
     "python.analysis.typeCheckingMode": "basic",
-    "jupyter.sendSelectionToInteractiveWindow": true
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "debug.console.fontFamily": "'Iosevka Nerd Font'",
+    "terminal.integrated.fontFamily": "'Iosevka Nerd Font'",
+    "markdown.preview.fontFamily": "'Iosevka Aile', -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    "jupyter.interactiveWindowMode": "perFile"
 }
