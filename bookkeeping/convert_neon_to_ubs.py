@@ -61,4 +61,4 @@ if __name__ == "__main__":
         parts = re.search("([0-9]{4})_([0-9]+)_account_statements.csv$", new_filepath)
         if parts:
             year, mon = parts.groups()
-            convert_file(Path(new_filepath), Path(new_filepath).with_name(f"{year}_{mon.zfill(2)}_neon.csv"))  # type: ignore
+            convert_file(Path(new_filepath), Path(new_filepath).with_name(f"neon_{year}-{mon.zfill(2)}.csv"))  # type: ignore
