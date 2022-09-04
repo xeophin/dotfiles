@@ -9,13 +9,14 @@ import sys
 
 
 UBS_ENCODING = "utf-8-sig"
-NEON_ENCODING = "utf-8"
-SEP = ';'
+WISE_ENCODING = "utf-8"
+SEP = ','
+TARGET_FOLDER = "/Users/oliverburkhard/Documents/Buchhaltung/Kontoauszüge_xml"
 
 
 def convert_content(content: str) -> str:
     lines = [line for line in content.split("\n") if line]
-    extractor = itemgetter(0, 1, 5, 6, 8)
+    extractor = itemgetter(0, 1, 2, 4)
 
     def maybe_extract(line: str):
         try:
@@ -23,19 +24,23 @@ def convert_content(content: str) -> str:
         except:
             return tuple()
 
-    transactions = [maybe_extract([elem.strip(" \"") for elem in line.split(SEP)]) for line in lines]  # type: ignore
+    transactions = [maybe_extract([elem.strip(" \"") for elem in line.split(
+        SEP)]) for line in lines]  # type: ignore
     ubs_head = (
         "Bewertungsdatum;Bankbeziehung;Portfolio;Produkt;IBAN;Whrg.;Datum von;Datum bis;Beschreibung;Abschluss;"
         "Buchungsdatum;Valuta;Beschreibung 1;Beschreibung 2;Beschreibung 3;Transaktions-Nr.;"
         "Devisenkurs zum Originalbetrag in Abrechnungswährung;Einzelbetrag;Belastung;Gutschrift;Saldo"
     )
     ubs_body = "\n".join([
-        ".".join(itemgetter(2, 1, 0)(transaction[0].split("-")))
+        ".".join(itemgetter(0, 1, 2)(transaction[1].split("-")))
         + ";"*10
-        + (".".join(itemgetter(2, 1, 0)(transaction[0].split("-"))) + ";") * 2
-        + ";".join(map(lambda x: "" if not x else str(x), transaction[2:]))
-        + ";"*4
-        + (f";{transaction[1]}" if not transaction[1].startswith("-") else f"{transaction[1][1:]};")
+        + (".".join(itemgetter(0, 1, 2)(transaction[1].split("-"))) + ";") * 2
+        + ";".join([transaction[3]])
+        + ";"*3
+        + ";".join([transaction[0]])
+        + ";"*3
+        + (f";{transaction[2]}" if not transaction[2].startswith("-")
+           else f"{transaction[2][1:]};")
         + ";0"
         for transaction in transactions[1:] if transaction
     ])
@@ -47,18 +52,29 @@ def convert_content(content: str) -> str:
     return "\n".join([ubs_head, ubs_body, ubs_foot])
 
 
-def convert_file(infile: str, outfile: str):
-    with open(infile, "r", encoding=NEON_ENCODING) as f:
+def convert_file(infile: Path):
+    with open(infile, "r", encoding=WISE_ENCODING) as f:
         content = f.read()
     to_write = convert_content(content)
-    with open(outfile, "w", encoding=UBS_ENCODING) as f:
+
+    # Read the first transaction and extract year and month
+    lines = [line for line in content.split("\n") if line]
+    dateElement = lines[1].split(SEP)[1].split('-')
+    year = dateElement[2]
+    month = dateElement[1]
+
+    with open(infile.with_name(f"wise_{year}-{month}.csv"), "w", encoding=UBS_ENCODING) as f:
         f.write(to_write)
 
 
 if __name__ == "__main__":
     for arg in sys.argv:
-        new_filepath = str(arg)
-        parts = re.search("([0-9]{4})_([0-9]+)_account_statements.csv$", new_filepath)
-        if parts:
-            year, mon = parts.groups()
-            convert_file(Path(new_filepath), Path(new_filepath).with_name(f"{year}_{mon.zfill(2)}_neon.csv"))  # type: ignore
+        filepath = Path(str(arg))
+
+        if filepath.name == 'balance_statement.csv':
+
+            # Convert the file
+            convert_file(filepath)
+
+            # remove the old file
+            filepath.unlink()
