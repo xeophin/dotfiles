@@ -120,3 +120,5 @@ eval $(thefuck --alias)
 
 # Set up Direnv
 eval "$(direnv hook zsh)"
+
+export PATH=$PATH:~/Library/Application\ Support/JetBrains/Toolbox/scripts
