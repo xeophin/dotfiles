@@ -2,91 +2,114 @@ tap "buo/cask-upgrade"
 tap "dart-lang/dart"
 tap "heroku/brew"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "mas-cli/tap"
 tap "mongodb/brew"
 tap "sass/sass"
-# Shell plugin manager
-brew "antibody"
+# Plugin manager for zsh, inspired by antigen and antibody
+brew "antidote"
 # Library for manipulating PNG images
 brew "libpng"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
+# Color management engine supporting ICC profiles
+brew "little-cms2"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # XML-based font configuration API for X Windows
 brew "fontconfig"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Core application library for C
 brew "glib"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# C library implementing the SSH2 protocol
+brew "libssh2"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
+# Libraries to talk to Microsoft SQL Server and Sybase databases
+brew "freetds"
+# GNU compiler collection
+brew "gcc"
+# Graphics library to dynamically manipulate images
+brew "gd"
 # Geometry Engine
 brew "geos"
+# File format designed to store large amounts of data
+brew "hdf5"
+# Cartographic Projections Library
+brew "proj"
+# Library and tools for dealing with GeoTIFF
+brew "libgeotiff"
 # GNOME XML library
 brew "libxml2"
+# Command-line interface for SQLite
+brew "sqlite"
 # Adds spatial SQL capabilities to SQLite
 brew "libspatialite"
+# Libraries and data formats for array-oriented scientific data
+brew "netcdf"
 # Package for scientific computing with Python
 brew "numpy"
 # PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler-qt5"
+brew "poppler"
 # Geospatial Data Abstraction Library
 brew "gdal"
+# Toolkit for image loading and pixel buffer manipulation
+brew "gdk-pixbuf"
 # Distributed revision control system
 brew "git"
 # Git extension for versioning large files
 brew "git-lfs"
-# C library implementing the SSH2 protocol
-brew "libssh2"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
-# Version controlled file system
-brew "gitfs"
 # Generate introspection data for GObject libraries
 brew "gobject-introspection"
+# Library for manipulating JPEG-2000 images
+brew "jasper"
+# Image manipulation
+brew "netpbm"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Framework for layout and rendering of i18n text
 brew "pango"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# CLI for ImageOptim, ImageAlpha and JPEGmini
-brew "imageoptim-cli"
+# Spell checker and morphological analyzer
+brew "hunspell"
 # Sophisticated file transfer program
 brew "lftp"
+# Framework for scientific data networking
+brew "libdap"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Mac App Store command-line interface
 brew "mas"
-# Scalable distributed version control system
-brew "mercurial"
-# Node version management
-brew "n", link: false
+# HTTP/2 C Library
+brew "nghttp2"
 # Platform built on V8 to build network applications
 brew "node"
-# Platform built on V8 to build network applications
-brew "node@6"
-# Python dependency management tool
-brew "pipenv"
+# General-purpose scripting language
+brew "php"
+# Cross-platform application and UI framework
+brew "qt@5"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler-qt5"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Cross-platform application and UI framework
 brew "qt"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
-# Object-relational database system
-brew "postgresql"
-# Python version management
-brew "pyenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python@2", link: false
 # Software environment for statistical computing
 brew "r"
 # Powerful, clean, object-oriented scripting language
@@ -101,14 +124,18 @@ brew "vim"
 brew "woff2"
 # JavaScript package manager
 brew "yarn"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
 # General-purpose lossless data-compression library
 brew "zlib"
 # UNIX shell (command interpreter)
 brew "zsh"
+# node.js dependency for heroku
+brew "heroku/brew/heroku-node"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community@3.6", link: true
+brew "mongodb/brew/mongodb-community"
 # Stylesheet Preprocessor
 brew "sass/sass/sass"
 # Collection of apps and services for photography, design, video, web, and UX
@@ -132,20 +159,26 @@ cask "font-iosevka"
 cask "font-iosevka-aile"
 # Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
 cask "font-iosevka-etoile"
+# Developer targeted fonts with a high number of glyphs
 cask "font-iosevka-nerd-font"
 # Typeface made for developers
 cask "font-jetbrains-mono"
 cask "font-jetbrainsmono-nerd-font"
+# Serif font "New York" by Apple
+cask "font-new-york"
+# Compact variant of "San Francisco" by Apple
+cask "font-sf-compact"
+# Monospaced variant of "San Francisco" by Apple
+cask "font-sf-mono"
+# Sans-serif variant of "San Francisco" by Apple
+cask "font-sf-pro"
 cask "font-source-sans-pro"
-# Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more
-cask "franz"
 # Web browser
 cask "google-chrome"
 # Tools to protect your emails and files
 cask "gpg-suite"
 # Link and retrieve key information
 cask "hook"
-cask "jeromelebel-mongohub"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # End-to-end encryption software
@@ -158,18 +191,13 @@ cask "mountain-duck"
 cask "notion"
 # Cloud storage client
 cask "onedrive"
-# File system integration
-cask "osxfuse"
-# Flexible software sketchbook and a language for learning how to code
-cask "processing"
 # Geographic Information System
 cask "qgis"
-# QuickLook plug-in that renders source code with syntax highlighting
-cask "qlcolorcode"
 # QuickLook generator for Markdown files
 cask "qlmarkdown"
-cask "qlprettypatch"
+# QuickLook plugin for CSV files
 cask "quicklook-csv"
+# QuickLook plugin for JSON files
 cask "quicklook-json"
 # Control your tools with a few keystrokes
 cask "raycast"
@@ -177,8 +205,6 @@ cask "raycast"
 cask "rescuetime"
 # Block your own access to distracting websites
 cask "selfcontrol"
-# MySQL/MariaDB database management platform
-cask "sequel-pro"
 # Video chat, voice call and instant messaging application
 cask "skype"
 # Team communication and collaboration software
@@ -197,19 +223,35 @@ cask "twine"
 cask "virtualbox"
 # Open-source code editor
 cask "visual-studio-code"
+# MySQL/MariaDB database management
+cask "sequel-ace"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin"
 mas "1Blocker", id: 1365531024
+mas "1Password for Safari", id: 1569813296
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Are.na for Safari", id: 1497800947
 mas "bookmarker for pinboard", id: 1451400394
+mas "Darkroom", id: 953286746
 mas "Deliveries", id: 924726344
 mas "Developer", id: 640199958
-mas "Hush", id: 1544743900
+mas "GarageBand", id: 682658836
+mas "Home Assistant", id: 1099568401
 mas "iA Writer", id: 775737590
-mas "Instapaper Save", id: 1481302432
+mas "iMovie", id: 408981434
+mas "Instapaper", id: 288545208
 mas "Keynote", id: 409183694
+mas "Nautomate", id: 1608529689
 mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 409203825
+mas "one sec", id: 1532875441
 mas "Pages", id: 409201541
+mas "Parcel", id: 639968404
+mas "Pins", id: 1547106997
 mas "Reeder", id: 1529448980
+mas "Save to Reader", id: 1640236961
+mas "Speediness", id: 1596706466
+mas "TestFlight", id: 899247664
+mas "Velja", id: 1607635845
 mas "Xcode", id: 497799835
