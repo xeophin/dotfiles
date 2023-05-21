@@ -91,9 +91,9 @@ export LC_TIME=de_CH.UTF-8
 # Set up the NVM plugin to use .nvmrc files
 export NVM_AUTO_USE=true
 
-# Set up Antibody
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
+# Set up Antidote
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
