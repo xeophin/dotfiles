@@ -20,7 +20,7 @@ setopt autocd
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Setup homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(brew shellenv)"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -93,7 +93,7 @@ export LC_TIME=de_CH.UTF-8
 export NVM_AUTO_USE=true
 
 # Set up Antidote
-source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+source ${HOMEBREW_PREFIX}/opt/antidote/share/antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 
