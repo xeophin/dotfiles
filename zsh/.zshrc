@@ -1,12 +1,8 @@
-
-
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 fi
 
 # Completion
@@ -17,7 +13,11 @@ compinit
 setopt autocd
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Also if you come from old homebrew
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Add some more stuff to, especially the homebrew things $PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 # Setup homebrew
 eval "$(brew shellenv)"
@@ -90,7 +90,10 @@ export LC_TIME=de_CH.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 # Set up the NVM plugin to use .nvmrc files
-export NVM_AUTO_USE=true
+# export NVM_AUTO_USE=true
+
+# Setup FNM
+eval "$(fnm env --use-on-cd)"
 
 # Set up Antidote
 source ${HOMEBREW_PREFIX}/opt/antidote/share/antidote/antidote.zsh
@@ -123,3 +126,6 @@ eval $(thefuck --alias)
 eval "$(direnv hook zsh)"
 
 export PATH=$PATH:~/Library/Application\ Support/JetBrains/Toolbox/scripts
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.zsh_p10k.zsh ]] || source ~/.zsh_p10k.zsh
