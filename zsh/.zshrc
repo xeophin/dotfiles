@@ -21,6 +21,7 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # Setup homebrew
 eval "$(brew shellenv)"
+export HOMEBREW_CASK_OPTS="--fontdir=/Library/Fonts"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
