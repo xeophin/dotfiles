@@ -43,6 +43,10 @@ $RECYCLE.BIN/
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 
+# CSV Plugin
+.idea/**/csv-editor.xml
+
+
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
@@ -111,4 +115,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
