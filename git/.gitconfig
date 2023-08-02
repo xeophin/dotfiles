@@ -1,6 +1,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
-	
+
 	# Make `git rebase` safer on macOS
   # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
   trustctime = false
@@ -9,40 +9,41 @@
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
 	autocrlf = input
-	
+
 [push]
 	default = simple
-	
+
 	# Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
-	
+
 [alias]
 	unstage = reset HEAD --
 	uncommit = reset --soft HEAD~
-	
+
 	# Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-  
+
   # Amend the currently staged files to the latest commit
   amend = commit --amend --reuse-message=HEAD
-  
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	
+
 [user]
 	name = Kaspar Manz
+	useConfigOnly = true
 	email = code@xeophin.net
-	
+
 # Selected .gitconfig goodness based on https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig
 
 [help]
 
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
-	
+
 [merge]
 
 	# Include summaries of merged commits in newly created merge commit messages
@@ -50,7 +51,7 @@
 	tool = opendiff
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -103,3 +104,8 @@
 
 [init]
 	defaultBranch = main
+
+# Conditional config based on https://myme.no/posts/2023-01-22-git-commands-you-do-not-need.html#:~:text=Git%20conditional-,configuration,-It%E2%80%99s%20hard%20to
+
+[includeIf "gitdir:~/dev/nzz/"]
+    path = "./nzz_config"
