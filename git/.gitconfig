@@ -108,4 +108,4 @@
 # Conditional config based on https://myme.no/posts/2023-01-22-git-commands-you-do-not-need.html#:~:text=Git%20conditional-,configuration,-It%E2%80%99s%20hard%20to
 
 [includeIf "gitdir:~/dev/nzz/"]
-    path = "./nzz_config"
+    path = "~/dotfiles/git/nzz_config"
