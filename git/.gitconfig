@@ -10,21 +10,18 @@
 	precomposeunicode = false
 	autocrlf = input
 
-[push]
-	default = simple
+	editor = nvim
 
+[init]
+	defaultBranch = main
+
+[push]
+	default = current
 	# Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
 
-[alias]
-	unstage = reset HEAD --
-	uncommit = reset --soft HEAD~
-
-	# Show the diff between the latest commit and the current state
-  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-
-  # Amend the currently staged files to the latest commit
-  amend = commit --amend --reuse-message=HEAD
+[pull]
+	rebase = true
 
 [filter "lfs"]
 	required = true
@@ -40,12 +37,14 @@
 # Selected .gitconfig goodness based on https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig
 
 [help]
-
 	# Automatically correct and execute mistyped commands
 	autocorrect = 1
 
-[merge]
+[diff]
+	algorithm = histogram
 
+[merge]
+	conflictStyle = zdiff3
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 	tool = opendiff
@@ -56,11 +55,14 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
-[push]
-	default = current
+[rerere]
+	enabled = true
+
 [alias]
 	unstage = reset HEAD --
+
 	uncommit = reset --soft HEAD~
+
 	rb = "!f() { \
 	    echo fetching...; \
 	    git fetch; \
@@ -99,11 +101,12 @@
     # View abbreviated SHA, description, and history graph of the latest 20 commits
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-[pull]
-	rebase = true
+    # Show the diff between the latest commit and the current state
+    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
-[init]
-	defaultBranch = main
+    # Amend the currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
+
 
 # Conditional config based on https://myme.no/posts/2023-01-22-git-commands-you-do-not-need.html#:~:text=Git%20conditional-,configuration,-It%E2%80%99s%20hard%20to
 
