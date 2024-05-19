@@ -17,11 +17,14 @@ fi
 info "Installing homebrew …"
 if brew -v foo >/dev/null 2>&1; then
     success "Homebrew already installed."
-elif /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; then
+elif /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
     success "Installed Homebrew"
 else
     error "Failed to install Homebrew"
 fi
+
+# Setup ZSH ever earlier, so the brew command can be found?
+./zsh/setup.sh
 
 # Package control must be executed first in order for the rest to work
 ./packages/setup.sh
