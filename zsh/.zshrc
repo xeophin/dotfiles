@@ -94,7 +94,7 @@ export LC_TIME=de_CH.UTF-8
 # export NVM_AUTO_USE=true
 
 # Setup FNM
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive --corepack-enabled --resolve-engines)"
 
 # Set up Antidote
 source ${HOMEBREW_PREFIX}/opt/antidote/share/antidote/antidote.zsh
