@@ -4,20 +4,17 @@ tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "mas-cli/tap"
-tap "mongodb/brew"
 tap "sass/sass"
 # Plugin manager for zsh, inspired by antigen and antibody
 brew "antidote"
-# Library for manipulating PNG images
-brew "libpng"
-# Zstandard is a real-time compression algorithm
-brew "zstd"
 # Color management engine supporting ICC profiles
 brew "little-cms2"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # XML-based font configuration API for X Windows
 brew "fontconfig"
+brew "fnm"
+brew "nushell"
 # Core application library for C
 brew "glib"
 # Vector graphics library with cross-device output support
@@ -34,8 +31,6 @@ brew "direnv"
 brew "duti"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
-# Libraries to talk to Microsoft SQL Server and Sybase databases
-brew "freetds"
 # GNU compiler collection
 brew "gcc"
 # Graphics library to dynamically manipulate images
@@ -84,8 +79,6 @@ brew "librsvg"
 brew "graphviz"
 # Spell checker and morphological analyzer
 brew "hunspell"
-# Sophisticated file transfer program
-brew "lftp"
 # Framework for scientific data networking
 brew "libdap"
 # C library of Git core methods that is re-entrant and linkable
@@ -96,22 +89,8 @@ brew "mas"
 brew "nghttp2"
 # Platform built on V8 to build network applications
 brew "node"
-# General-purpose scripting language
-brew "php"
-# Cross-platform application and UI framework
-brew "qt@5"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler-qt5"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
-# Cross-platform application and UI framework
-brew "qt"
-# Software environment for statistical computing
-brew "r"
+brew "python"
 # Powerful, clean, object-oriented scripting language
 brew "ruby", link: true
 # Command-line tool for the Amazon S3 service
@@ -134,8 +113,6 @@ brew "zsh"
 brew "heroku/brew/heroku-node"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
-# High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community"
 # Stylesheet Preprocessor
 brew "sass/sass/sass"
 # Collection of apps and services for photography, design, video, web, and UX
@@ -148,11 +125,6 @@ cask "calibre"
 cask "cyberduck"
 # API documentation browser and code snippet manager
 cask "dash"
-# Voice and text chat software
-cask "discord"
-cask "font-fira-code"
-cask "font-firacode-nerd-font"
-cask "font-ibm-plex"
 # Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
 cask "font-iosevka"
 # Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
@@ -161,9 +133,6 @@ cask "font-iosevka-aile"
 cask "font-iosevka-etoile"
 # Developer targeted fonts with a high number of glyphs
 cask "font-iosevka-nerd-font"
-# Typeface made for developers
-cask "font-jetbrains-mono"
-cask "font-jetbrainsmono-nerd-font"
 # Serif font "New York" by Apple
 cask "font-new-york"
 # Compact variant of "San Francisco" by Apple
@@ -172,17 +141,12 @@ cask "font-sf-compact"
 cask "font-sf-mono"
 # Sans-serif variant of "San Francisco" by Apple
 cask "font-sf-pro"
-cask "font-source-sans-pro"
 # Web browser
 cask "google-chrome"
-# Tools to protect your emails and files
-cask "gpg-suite"
 # Link and retrieve key information
-cask "hook"
+cask "hookmark"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# End-to-end encryption software
-cask "keybase"
 # App to manage software development and track bugs
 cask "linear-linear"
 # Mounts servers and cloud storages as a disk on the desktop
@@ -193,65 +157,36 @@ cask "notion"
 cask "onedrive"
 # Geographic Information System
 cask "qgis"
-# QuickLook generator for Markdown files
-cask "qlmarkdown"
-# QuickLook plugin for CSV files
-cask "quicklook-csv"
-# QuickLook plugin for JSON files
-cask "quicklook-json"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Time optimising application
 cask "rescuetime"
 # Block your own access to distracting websites
 cask "selfcontrol"
-# Video chat, voice call and instant messaging application
-cask "skype"
 # Team communication and collaboration software
 cask "slack"
-# Application for inspecting installer packages
-cask "suspicious-package"
 # Control windows and applications right from your trackpad
 cask "swish"
 # Client application for TimeCamp software - track time and change tasks
 cask "timecamp"
-# File transfer application
-cask "transmit"
-# Tool for telling interactive, nonlinear stories
-cask "twine"
-# Virtualizer for x86 hardware
-cask "virtualbox"
 # Open-source code editor
 cask "visual-studio-code"
-# MySQL/MariaDB database management
-cask "sequel-ace"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin"
 mas "1Blocker", id: 1365531024
 mas "1Password for Safari", id: 1569813296
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Are.na for Safari", id: 1497800947
 mas "bookmarker for pinboard", id: 1451400394
-mas "Darkroom", id: 953286746
-mas "Deliveries", id: 924726344
-mas "Developer", id: 640199958
-mas "GarageBand", id: 682658836
 mas "Home Assistant", id: 1099568401
 mas "iA Writer", id: 775737590
-mas "iMovie", id: 408981434
-mas "Instapaper", id: 288545208
 mas "Keynote", id: 409183694
 mas "Nautomate", id: 1608529689
 mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 409203825
 mas "one sec", id: 1532875441
 mas "Pages", id: 409201541
-mas "Parcel", id: 639968404
 mas "Pins", id: 1547106997
-mas "Reeder", id: 1529448980
 mas "Save to Reader", id: 1640236961
-mas "Speediness", id: 1596706466
 mas "TestFlight", id: 899247664
 mas "Velja", id: 1607635845
 mas "Xcode", id: 497799835
