@@ -6,7 +6,7 @@ cd "$DIR"
 . ../scripts/functions.sh
 
 COMMENT=\#*
-REPO_PATH=$(realpath ~/dev)
+REPO_PATH=$(realpath ~/Developer)
 
 find * -name "*.list" | while read fn; do
     folder="${fn%.*}"

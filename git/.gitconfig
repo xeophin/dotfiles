@@ -117,5 +117,9 @@
 
 [includeIf "gitdir:~/dev/nzz/"]
 path = "~/dotfiles/git/nzz_config"
+
+[includeIf "gitdir:~/Developer/nzz/"]
+path = "~/dotfiles/git/nzz_config"
+
 [log]
 	date = iso
