@@ -8,7 +8,6 @@ zsh-users/zsh-syntax-highlighting
 ohmyzsh/ohmyzsh path:plugins/direnv
 
 # Support for nvm and npm
-lukechilds/zsh-nvm
 lukechilds/zsh-better-npm-completion
 buonomo/yarn-completion
 g-plane/zsh-yarn-autocompletions
