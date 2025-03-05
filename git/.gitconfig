@@ -12,13 +12,17 @@
 
 	editor = nvim
 
+	fsmonitor = true
+	untrackedCache = true
+
 [init]
 	defaultBranch = main
 
 [push]
-	default = current
+	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
+  autoSetupRemote = true
 
 [pull]
 	rebase = true
@@ -26,6 +30,7 @@
 [fetch]
 	prune = true
 	pruneTags = true
+	all = true
 
 [filter "lfs"]
 	required = true
@@ -46,6 +51,9 @@
 
 [diff]
 	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 
 [merge]
 	conflictStyle = zdiff3
@@ -62,6 +70,7 @@
 
 [rerere]
 	enabled = true
+	autoUpdate = true
 
 [alias]
 	unstage = reset HEAD --
@@ -123,3 +132,17 @@ path = "~/dotfiles/git/nzz_config"
 
 [log]
 	date = iso
+
+[column]
+	ui=auto
+
+[branch]
+    sort=-commiterdate
+
+[tag]
+    sort=version:refname
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
