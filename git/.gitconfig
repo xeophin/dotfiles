@@ -61,9 +61,7 @@
 	log = true
 	tool = opendiff
 	keepbackup = false
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -146,3 +144,6 @@ path = "~/dotfiles/git/nzz_config"
 	autoSquash = true
 	autoStash = true
 	updateRefs = true
+
+[worktree]
+    guessRemote = true
