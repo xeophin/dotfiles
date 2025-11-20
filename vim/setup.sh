@@ -10,8 +10,6 @@ DESTINATION="$(realpath ~)"
 
 info "Setting up Vim..."
 
-$(brew --prefix)/opt/python@3.10/bin/pip3 install powerline-status
-
 find . -name ".vim*" | while read fn; do
     fn=$(basename $fn)
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
