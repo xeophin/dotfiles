@@ -6,7 +6,7 @@ cd "$DIR" || exit
 . ../scripts/functions.sh
 
 SOURCE="$(realpath .)"
-DESTINATION="$(realpath '~/Library/Application Support/nushell')"
+DESTINATION="$HOME/Library/Application Support/nushell"
 
 info "Configuring services..."
 mkdir -p "${DESTINATION}"
