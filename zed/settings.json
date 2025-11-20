@@ -1,0 +1,46 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "prettier": {
+    "allowed": true
+  },
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+  "hard_tabs": true,
+  "tab_size": 2,
+  "auto_signature_help": true,
+  "autosave": "on_focus_change",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "features": {
+    "edit_prediction_provider": "zed",
+    "copilot": false
+  },
+  "base_keymap": "JetBrains",
+  "theme": "Fleet Light",
+  "buffer_font_family": "Iosevka",
+  "buffer_font_features": {
+    "calt": true,
+    "ss05": true,
+    "ss01": true,
+    "ss02": true,
+    "ss03": true,
+    "ss04": true
+  },
+  "buffer_font_size": 15,
+  "terminal": {
+    "font_family": "Iosevka Nerd Font",
+    "shell": {
+      "program": "nu"
+    }
+  }
+}
