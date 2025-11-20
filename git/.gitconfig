@@ -118,6 +118,23 @@
 
     # Amend the currently staged files to the latest commit
     amend = commit --amend --reuse-message=HEAD
+	append = town append
+	compress = town compress
+	contribute = town contribute
+	diff-parent = town diff-parent
+	down = town down
+	hack = town hack
+	delete = town delete
+	observe = town observe
+	park = town park
+	prepend = town prepend
+	propose = town propose
+	rename = town rename
+	repo = town repo
+	set-parent = town set-parent
+	ship = town ship
+	sync = town sync
+	up = town up
 
 
 # Conditional config based on https://myme.no/posts/2023-01-22-git-commands-you-do-not-need.html#:~:text=Git%20conditional-,configuration,-It%E2%80%99s%20hard%20to
