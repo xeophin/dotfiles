@@ -123,6 +123,5 @@ Configuration and Setup for [Zsh](https://www.zsh.org/).
 * setup.sh – Symlinks the `.z*` files to `~/`
 * .zprofile – `PATH` support for `pyenv`
 * .zsh_alias – Aliases to make working with Zsh faster
-* .zsh_p10k.zsh – Powerlevel10k config
 * .zsh_plugins.txt – Plugins that should be loaded using the plugin manager [Antibody](https://getantibody.github.io/)
 * .zshrc – Zsh Config
