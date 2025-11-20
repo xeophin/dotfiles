@@ -1,3 +1,4 @@
+spaceship-prompt/spaceship-prompt
 chrissicool/zsh-256color
 romkatv/powerlevel10k
 agkozak/zsh-z
@@ -9,5 +10,5 @@ ohmyzsh/ohmyzsh path:plugins/direnv
 
 # Support for nvm and npm
 lukechilds/zsh-better-npm-completion
-buonomo/yarn-completion
-g-plane/zsh-yarn-autocompletions
+buonomo/yarn-extra-completion
+michakfromparis/zsh-pnpm-completions
