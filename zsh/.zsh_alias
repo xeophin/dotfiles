@@ -6,3 +6,6 @@ alias ..="cd .."
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../" #this is probably ridiculous
+
+# editors
+alias vim="nvim"
