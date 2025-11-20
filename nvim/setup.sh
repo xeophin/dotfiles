@@ -8,11 +8,11 @@ cd "$DIR" || exit
 SOURCE="$(realpath .)"
 DESTINATION="$HOME/.config/nvim"
 
-info "Configuring services..."
+info "Configuring Neovim with Lazyvim..."
 mkdir -p "${DESTINATION}"
 find * -maxdepth 0 -not -name "$(basename ${0})" | while read fn; do
     fn=$(basename "${fn}")
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 
-success "Finished configuring services."
+success "Finished configuring Neovim with Lazyvim."

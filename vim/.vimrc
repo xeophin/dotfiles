@@ -23,7 +23,6 @@
 "    -> Spell checking
 "    -> Misc
 "    -> Helper functions
-"    -> Powerline
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
