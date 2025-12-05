@@ -1,6 +1,6 @@
 # Completion
-autoload -U compinit
-compinit
+autoload -Uz compinit
+compinit -u
 
 # AutoCD
 setopt autocd
