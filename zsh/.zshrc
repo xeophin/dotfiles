@@ -118,4 +118,4 @@ eval "$(direnv hook zsh)"
 
 export PATH=$PATH:~/Library/Application\ Support/JetBrains/Toolbox/scripts
 
-source /Users/xeo/.config/broot/launcher/bash/br
+source ~/.config/broot/launcher/bash/br
