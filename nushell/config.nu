@@ -751,4 +751,4 @@ $env.config = {
     ]
 }
 
-use '/Users/xeo/.config/broot/launcher/nushell/br' *
+use '~/.config/broot/launcher/nushell/br' *
